@@ -1,14 +1,20 @@
 import "./App.css";
-import Address from "./components/profile/Address/Address.jsx";
-import FullName from "./components/profile/FullName/FullName.jsx";
-import ProfilePhoto from "./components/profile/ProfilePhoto.jsx";
+import Profile from "./components/Profile/Profile.jsx";
+import image from "./assets/profile.jpg";
 
 function App() {
+  const handleName = (fullName) => {
+    alert(`Name: ${fullName}`);
+  };
   return (
     <div className="App">
-      <ProfilePhoto />
-      <FullName />
-      <Address />
+      <Profile
+        fullName="tesnime"
+        bio="I'm a web developer."
+        profession="Web Developer"
+        handleName={handleName}
+      />
+      <img src={image} alt="Profile" />
     </div>
   );
 }
